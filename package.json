@@ -1,0 +1,30 @@
+{
+  "name": "desafio_future_back-end",
+  "version": "1.0.0",
+  "description": "API de filmes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx babel-node src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.0-beta.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "7.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uriel-David/Desafio_Future_Back-end.git"
+  },
+  "author": "Uriel David Q. A. de Azevedo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Uriel-David/Desafio_Future_Back-end/issues"
+  },
+  "homepage": "https://github.com/Uriel-David/Desafio_Future_Back-end#readme"
+}

@@ -1,8 +1,11 @@
+// Requires para funcionamento do controller de categorias
 const database = require('../config/database');
 const models = require('../models/model');
 
+// Exportação dos controllers responsáveis pelas funcionalidades da rota categoria
 module.exports = {
 
+    // Função para recuperar as categorias da base de dados
     async getCategoria(req, res) {
 
         try {
@@ -13,6 +16,7 @@ module.exports = {
         }
     },
 
+    // Função para gravar as categorias da base de dados
     async postCategoria(req, res) {
 
         const { categoria } = req.body;
@@ -24,6 +28,7 @@ module.exports = {
         }
     },
 
+    // Função para atualizar as categorias da base de dados
     async putCategoria(req, res) {
 
         const { id } = req.params;
@@ -40,6 +45,7 @@ module.exports = {
         }
     },
 
+    // Função para deletar as categorias da base de dados
     async deleteCategoria(req, res) {
 
         const { id } = req.params;

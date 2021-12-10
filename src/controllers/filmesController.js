@@ -1,8 +1,11 @@
+// Requires para funcionamento do controller de categorias
 const database = require('../config/database');
 const models = require('../models/model');
 
+// Exportação dos controllers responsáveis pelas funcionalidades da rota filmes
 module.exports = {
 
+    // Função para recuperar os filmes da base de dados
     async getFilme(req, res) {
 
         try {
@@ -20,6 +23,7 @@ module.exports = {
         }
     },
 
+    // Função para recuperar os filmes com alguma categoria específica da base de dados
     async getFilmeCategoria(req, res) {
 
         try {
@@ -41,6 +45,7 @@ module.exports = {
         }
     },
 
+    // Função para recuperar os filmes com algum gênero específico da base de dados
     async getFilmeGenero(req, res) {
 
         try {
@@ -62,6 +67,7 @@ module.exports = {
         }
     },
 
+    // Função para gravar os filmes da base de dados
     async postFilme(req, res) {
         try {
             const {categoria, ...data} = req.body;
@@ -76,6 +82,7 @@ module.exports = {
         }
     },
 
+    // Função para atualizar os filmes da base de dados
     async putFilme(req, res) {
         try {
             const { id } = req.params;
@@ -94,6 +101,7 @@ module.exports = {
         }
     },
 
+    // Função para deletar os filmes da base de dados
     async deleteFilme(req, res) {
         try {
             const { id } = req.params;

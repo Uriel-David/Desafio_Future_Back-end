@@ -1,5 +1,7 @@
+// Require para funcionamento da base de dados
 const Sequelize = require('sequelize');
 
+// Criação da classe de configuração da base de dados
 const sequelize = new Sequelize({
     host: 'localhost',
     database: 'desafio_future_backend',
@@ -10,9 +12,10 @@ const sequelize = new Sequelize({
     logging: false
 });
 
+// Exportação das configurações da base de dados
 module.exports = sequelize;
 
-// Test DB Conenction //
+// Teste da conexão da base de dados
 async function test() {
     try {
         let result = await sequelize.authenticate();
@@ -25,4 +28,5 @@ async function test() {
     }
   }
 
-  test();
+// Função para teste da base de dados
+test();
